@@ -7,8 +7,8 @@ echo "You dont have Admin privilies to run this script, Please run with Admin ac
 exit 1
 
 fi
-apt list git
+apt list nginx
 if [ $? != 0 ]
 then
-echo "git not installed"
+echo "nginx not installed"
 fi
