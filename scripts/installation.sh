@@ -8,7 +8,21 @@ exit 1
 
 fi
 apt list nginx
-if [ $? != 0 ]
+if [ $? -ne 0 ]
 then
-echo "nginx not installed"
+echo "nginx not installed,going to install nginx"
+apt install nginx -y
+if [ $? -ne 0 ]
+then 
+echo "nginx installation is failure"
+exit 1
+else
+echo "nginx installation is success"
 fi
+else
+echo "nginx is already installed"
+
+fi
+
+
+
