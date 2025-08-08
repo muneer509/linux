@@ -1,0 +1,74 @@
+Linux adminstartion
+ls -l:
+
+CRUD: create, read, update and delete
+
+signup: creating profile
+reset password: udating
+remove account: delete
+browsing: reading
+cat: to display the file content
+cat > will add text to file
+cat >> append additinal text to file
+
+wget: to downlaod the files from remote
+curl: its used to show the content in your terminal from remote
+
+
+sudo su:
+
+
+User management;
+---------------
+useradd will add user 
+when you craete user by deefault a group will craeted with same user name
+user info file: cat /etc/passwd
+id muneer
+uid=1001(muneer) gid=1002(muneer) groups=1002(muneer)
+group info:
+cat /etc/group
+set password for user command: passwd muneer
+
+Group:
+groupadd command will craete group
+
+ groupadd devops
+root ➜ /workspaces/linux $ group service desk
+-bash: group: command not found
+root ➜ /workspaces/linux $ groupadd servicedesk
+root ➜ /workspaces/linux $ cat /etc/group
+
+adding group to the user:
+
+usermod -g servicedesk muneer
+root ➜ /workspaces/linux $ id muneer
+uid=1001(muneer) gid=1005(servicedesk) groups=1005(servicedesk)
+usermod -aG devops muneer: will add secoundry group to the user
+root ➜ /workspaces/linux $ id muneer
+uid=1001(muneer) gid=1005(servicedesk) groups=1005(servicedesk),1004(devops)
+
+removing group from user:
+gpasswd command is useful for removing group
+root ➜ /workspaces/linux $ gpasswd -d muneer devops
+Removing user muneer from group devops
+
+by deafult linux will allow keybased authentication, not password base authentication
+
+
+Package management:
+-------------------
+package management tools in RHEL:
+1. dnf
+2. yum
+
+
+Service management:
+---------------------
+service life cycle:
+start, stop, restart, status. enable, disable
+
+
+shell Scripting:
+---------------
+Arrays: ("Muneer" "Keerth" "Shaik")
+
