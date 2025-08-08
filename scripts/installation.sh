@@ -10,4 +10,4 @@ apt list git
 if [ $? != 0 ]
 then
 echo "git not installed"
-if
+fi
