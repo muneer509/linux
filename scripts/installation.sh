@@ -7,20 +7,20 @@ echo "You dont have Admin privilies to run this script, Please run with Admin ac
 exit 1
 
 fi
-apt list nginx
+apt list mysql
 if [ $? -ne 0 ]
 then
-echo "nginx not installed,going to install nginx"
-apt install nginx -y
+echo "mysql not installed,going to install nginx"
+apt install mysql -y
 if [ $? -ne 0 ]
 then 
-echo "nginx installation is failure"
+echo "mysql installation is failure"
 exit 1
 else
-echo "nginx installation is success"
+echo "mysql installation is success"
 fi
 else
-echo "nginx is already installed"
+echo "mysql is already installed"
 
 fi
 
