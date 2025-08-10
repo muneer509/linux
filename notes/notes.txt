@@ -72,3 +72,8 @@ shell Scripting:
 ---------------
 Arrays: ("Muneer" "Keerth" "Shaik")
 
+functions in shell:
+------------------
+syntax: FUNCTION_NAME(){
+    
+}
