@@ -4,8 +4,8 @@
 # do
 #   echo $i
 # done
-ROOTID=(id -u)
-if [ $ROOTID -ne 0]
+ID=$(id -u)
+if [ $ID -ne 0]
 then
 echo "Please install this script with root user access"
 fi
